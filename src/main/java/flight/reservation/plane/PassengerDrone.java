@@ -1,6 +1,8 @@
 package flight.reservation.plane;
 
-public class PassengerDrone {
+import flight.reservation.plane.Aircraft;
+
+public class PassengerDrone implements Aircraft{
     private final String model;
 
     public PassengerDrone(String model) {
@@ -9,5 +11,11 @@ public class PassengerDrone {
         } else {
             throw new IllegalArgumentException(String.format("Model type '%s' is not recognized", model));
         }
+    }
+
+    @Override
+    public String getModel()
+    {
+        return model;
     }
 }
