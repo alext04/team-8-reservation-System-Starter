@@ -1,0 +1,9 @@
+We found out that we had an object in Runner.java, which stored plane types and we were
+using different classes to initialize different objects in the same list.
+
+We created an interface called Aircraft.java with a common function getModel.
+Which was then implemented in Helicopter, PassengerDrone and PassengerPlane.
+Now this was used by Aircraft factory which provided a common Constructor to return
+a type of Aircraft objects.
+
+Which was then used in Runner with parameters.
