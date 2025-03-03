@@ -7,3 +7,17 @@ Now this was used by Aircraft factory which provided a common Constructor to ret
 a type of Aircraft objects.
 
 Which was then used in Runner with parameters.
+
+
+We implemented a strategy pattern to deal with the payments in the system.
+The files changed are flightorder.java in the order folder. Here to implement the pattern where you should add the liskov substitution principle and call the class objects with the interface type is implemted.
+
+In the payments folder
+Added paymentstrategy interface which should be extended by all the payments methods.
+It has the pay() method which is common for every payment and should be overriden.
+
+Added a new class Creditcardpayment which deals with the logic related with the paying using the credit card. Previously this was all present in flightorder thus making it tightly coupled and not clearly seperating the responsibilities for each class. But after this refractoring, we can see the flightorder class is more cohesive. Thus increasing the understandability and also increasing the reusability of the creditcardpayment class.
+
+And also added the paypalpayment class and extended the payments strategy interface and overriding the pay in the paymentstrategy method with the logic related to the paypal.
+
+Overall with this pattern, we increased the overall extensibility support of the code and increased cohesion in the flightorder class and also made more readable code.
