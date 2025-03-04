@@ -21,3 +21,9 @@ Added a new class Creditcardpayment which deals with the logic related with the 
 And also added the paypalpayment class and extended the payments strategy interface and overriding the pay in the paymentstrategy method with the logic related to the paypal.
 
 Overall with this pattern, we increased the overall extensibility support of the code and increased cohesion in the flightorder class and also made more readable code.
+
+
+We observed that Schedule was a class which should not have multiple instances. Thus we made it a singleton class.
+We made the constructor private and added a static method to get the instance of the class.
+Thus we can only have one instance of the class and we can access it using the getInstance method.
+Modified the code and tests to use the getInstance method to get the instance of the class.
