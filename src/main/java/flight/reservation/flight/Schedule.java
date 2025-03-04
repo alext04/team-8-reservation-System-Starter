@@ -6,11 +6,20 @@ import java.util.List;
 
 public class Schedule {
 
+    private static Schedule instance;
     private List<ScheduledFlight> scheduledFlights;
 
-
-    public Schedule() {
+    // Private constructor to prevent instantiation
+    private Schedule() {
         scheduledFlights = new ArrayList<>();
+    }
+
+    // Static method to provide access to the single instance
+    public static Schedule getInstance() {
+        if (instance == null)
+            instance = new Schedule();
+        else instance.clear();
+        return instance;
     }
 
     public List<ScheduledFlight> getScheduledFlights() {

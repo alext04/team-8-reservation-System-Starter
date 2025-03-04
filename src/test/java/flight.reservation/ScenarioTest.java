@@ -31,7 +31,7 @@ public class ScenarioTest {
 
     @BeforeEach
     public void initSchedule() {
-        schedule = new Schedule();
+        schedule = Schedule.getInstance();
         schedule.clear();
     }
 

@@ -20,12 +20,12 @@ public class Runner {
     );
 
     static List<Object> aircrafts = Arrays.asList(
-                AircraftFactory.createAircraft("passengerplane", "A380"),
-                AircraftFactory.createAircraft("passengerplane", "A350"),
-                AircraftFactory.createAircraft("passengerplane", "Embraer 190"),
-                AircraftFactory.createAircraft("passengerplane", "Antonov AN2"),
-                AircraftFactory.createAircraft("helicopter", "H1"),
-                AircraftFactory.createAircraft("passengerdrone", "HypaHype")
+            AircraftFactory.createAircraft("passengerplane", "A380"),
+            AircraftFactory.createAircraft("passengerplane", "A350"),
+            AircraftFactory.createAircraft("passengerplane", "Embraer 190"),
+            AircraftFactory.createAircraft("passengerplane", "Antonov AN2"),
+            AircraftFactory.createAircraft("helicopter", "H1"),
+            AircraftFactory.createAircraft("passengerdrone", "HypaHype")
     );
 
     static List<Flight> flights = Arrays.asList(
@@ -37,7 +37,7 @@ public class Runner {
             new Flight(6, airports.get(5), airports.get(7), aircrafts.get(5))
     );
 
-    static Schedule schedule;
+    static Schedule schedule = Schedule.getInstance();
 
     public static void main(String[] args) {
     }
